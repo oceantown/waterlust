@@ -1,1 +1,18 @@
-<h1>WATERLUST</h1>
+<h1>#WATERLUST</h1>
+
+<% @posts.each do |post| %>
+<h2><%= link_to post.title %></h2>
+<% end %>
+
+<p><%= link_to "Quench The Thirst", new_post_path %></p>
+
+<style type="text/css">
+h1 {
+  font-family: 'Market_Deco', sans-serif;
+  font-size: 80px;
+  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+}
+</style>
