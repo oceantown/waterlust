@@ -1,18 +1,94 @@
+<ul>
+  <li><a class="active" href="#home">Waterlust</a></li>
+  <li><a href="#shots">Shots</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#support">Support</a></li>
+  <div id="signups">
+    <li><a href="#signup">Sign Up</a></li>
+    <li><a href="#signin">Sign In</a></li>
+  <div>
+</ul>
+
+<ul class="subnav">
+  <li><a href="#popular">Popular</a></li>
+  <li><a href="#vote">Vote</a></li>
+</ul>
+
+
 <h1>#WATERLUST</h1>
+<p class="quench"><a href="#post"><%= link_to "Quench Your Thirst", new_post_path %></p>
 
 <% @posts.each do |post| %>
+<%= link_to (image_tag post.image.url(:small)) %>
 <h2><%= link_to post.title %></h2>
 <% end %>
 
-<p><%= link_to "Quench The Thirst", new_post_path %></p>
 
-<style type="text/css">
+
+<style>
+#signups {
+  float: right;
+}
+body {
+  font-family: 'Market_Deco', sans-serif;
+  text-decoration: none;
+}
+
 h1 {
   font-family: 'Market_Deco', sans-serif;
   font-size: 80px;
-  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
+  background: -webkit-linear-gradient(20deg, #FF7DB1, #AFEEEE 70%, #AFEEEE);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   text-align: center;
+  margin-bottom: 10px;
+}
+
+@font-face {
+  font-family: 'Market_Deco';
+  src:url('Market_Deco.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  text-align: center;
+  font-family: 'Market_Deco', sans-serif;
+}
+
+ul {
+    font-family: 'Market_Deco', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: -webkit-linear-gradient(50deg, #48D1CC, #48D1CC 70%, #48D1CC);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    background-color: #white;
+}
+
+.active {
+  background: -webkit-linear-gradient(20deg, #FFFACD, #A0F1FF 70%, #AFEEEE);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.subnav {
+  text-align: center;
+  background: -webkit-linear-gradient(50deg, #A0F1FF, #A0F1FF 70%, #A0F1FF);
 }
 </style>
