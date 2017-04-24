@@ -5,30 +5,39 @@
   <li><a href="#support">Support</a></li>
   <div id="signups">
     <li><a href="#signup">Sign Up</a></li>
-    <li><a href="#signin">Sign In</a></li>
+    <% if user_signed_in? %>
+      <li><%= link_to "Log Out", destroy_user_session_path, method: 'delete' %></li>
+    <% else %>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+    <% end %>
   <div>
 </ul>
 
 <ul class="subnav">
-  <li><a href="#popular">Popular</a></li>
-  <li><a href="#vote">Vote</a></li>
+    <li><a href="#popular">Popular</a></li>
+    <li><a href="#vote">Vote</a></li>
+    <p class="quench"><%= link_to "Upload, Quench Your Thirst", new_post_path, class: 'css_class', style: 'text-decoration: none' %></p>
 </ul>
 
-
 <h1>#WATERLUST</h1>
-<p class="quench"><a href="#post"><%= link_to "Quench Your Thirst", new_post_path %></p>
 
 <% @posts.each do |post| %>
-<%= link_to (image_tag post.image.url(:small)) %>
-<h2><%= link_to post.title %></h2>
+  <%= link_to image_tag(post.image.url :small), post_path(post) %>
+  <h2><%= link_to post.title, post_path(post) %></h2>
 <% end %>
-
-
 
 <style>
 #signups {
   float: right;
 }
+
+.quench {
+  text-decoration: none;
+  float: left;
+  dislay: inline-block;
+  margin-left: 275px;
+}
+
 body {
   font-family: 'Market_Deco', sans-serif;
   text-decoration: none;
@@ -36,12 +45,13 @@ body {
 
 h1 {
   font-family: 'Market_Deco', sans-serif;
-  font-size: 80px;
-  background: -webkit-linear-gradient(20deg, #FF7DB1, #AFEEEE 70%, #AFEEEE);
+  font-size: 70px;
+  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   text-align: center;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 @font-face {
@@ -62,7 +72,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: -webkit-linear-gradient(50deg, #48D1CC, #48D1CC 70%, #48D1CC);
+    background: -webkit-linear-gradient(50deg, #A0F1FF, #A0F1FF 70%, #A0F1FF);
 }
 
 li {
@@ -82,13 +92,17 @@ a:hover:not(.active) {
 }
 
 .active {
-  background: -webkit-linear-gradient(20deg, #FFFACD, #A0F1FF 70%, #AFEEEE);
+  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .subnav {
   text-align: center;
-  background: -webkit-linear-gradient(50deg, #A0F1FF, #A0F1FF 70%, #A0F1FF);
+  background: -webkit-linear-gradient(50deg, #AFEEEE, #AFEEEE 70%, #AFEEEE);
+}
+
+.footer {
+  text-align: center;
 }
 </style>
