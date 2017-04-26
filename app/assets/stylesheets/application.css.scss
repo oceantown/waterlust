@@ -18,10 +18,10 @@
 @import "bootstrap";
 
 @font-face {
-   font-family: 'Market_Deco';
-   src:url('Market_Deco.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
+  font-family: 'Market_Deco';
+  src:url('Market_Deco.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .search {
@@ -29,104 +29,138 @@
   margin-right: 15px;
   margin-bottom: 13px;
   height: 23px;
-  font-size: 11px;
+  font-size: 14px;
+  position: relative;
+  opacity: 0.5;
+  border:0px solid #dbdbdb;
 }
 
+
 #signups {
-   float: right;
+  float: right;
+  font-size: 16px;
 }
 
 body {
-   font-family: 'Market_Deco', sans-serif;
-   text-decoration: none;
+  font-family: 'Market_Deco', sans-serif;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 @font-face {
-   font-family: 'Market_Deco';
-   src:url('Market_Deco.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
+  font-family: 'Market_Deco';
+  src:url('Market_Deco.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 p {
-   text-align: center;
-   font-family: 'Market_Deco', sans-serif;
+  text-align: center;
+  font-family: 'Market_Deco';
 }
 
 ul {
-   font-family: 'Market_Deco', sans-serif;
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   background: -webkit-linear-gradient(50deg, #A0F1FF, #A0F1FF 70%, #A0F1FF);
+  font-family: 'Market_Deco';
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: -webkit-linear-gradient(50deg, #A0F1FF, #A0F1FF 70%, #A0F1FF);
 }
 
 li {
-   float: left;
+  float: left;
 }
 
 li a {
-   display: block;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 a:hover:not(.active) {
-   background-color: #white;
-   text-decoration: none;
-   color: grey;
+  background-color: #white;
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  color: black;
+  background: white;
+  transition: all 0.3s;
+  --webkit-transition: all 0.3s;
+  --moz-transition: all 0.3s;
+  outline: none;
 }
 
 .active {
-   background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
-   -webkit-text-fill-color: transparent;
-   -webkit-background-clip: text;
+  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 #upload {
-  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+}
+
+.nav {
+  height: 30px;
 }
 
 .subnav {
-   background: -webkit-linear-gradient(50deg, #AFEEEE, #AFEEEE 70%, #AFEEEE);
+  background: #AFEEEE;
+  font-family: 'Market_Deco';
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 50px;
 }
 
 .logo {
-   text-align: center;
-   margin: auto;
+  text-align: center;
+  margin: auto;
 }
 
 .form {
-   text-align: center;
+  text-align: center;
 }
 
 .subnav ul {
-   list-style: none;
-   text-align: center;
+  list-style: none;
+  text-align: center;
 }
 
 .subnav ul li {
-   display: inline-block;
+  display: inline-block;
 }
 
 #banner {
-  padding: 10px;
-  text-align:  center;
-  font-size: 50px;
-  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  font-family: 'Market_Deco', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Market_Deco';
+  color: white;
 }
 
 #banner img {
 }
 
 #banner h1 {
-    text-align:center;
+  text-align: center;
+  font-family: 'Market_Deco';
+  color: white;
+}
+
+footer {
+  text-align: center;
+  background: grey;
+}
+
+h1 {
+  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-size: 60px;
 }
