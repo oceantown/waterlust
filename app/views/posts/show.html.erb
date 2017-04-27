@@ -1,8 +1,10 @@
 <h1><%= @post.title %></h1>
-<h1><%= image_tag @post.image.url(:medium) %></h1>
+<p><%= image_tag @post.image.url(:medium) %><p>
 <p><%= @post.link %></p>
 <p><%= @post.description %></p>
 <p><%= @post.user.name %></p>
 
+<% if @post.user == current_user %>
 <p><%= link_to "Edit", edit_post_path(@post) %></p>
 <p><%= link_to "Delete", post_path(@post), method: :delete %></p>
+<% end %>

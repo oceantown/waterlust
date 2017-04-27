@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :current_user, only: [:edit, :update, :destroy]
 
   # GET
   def index
@@ -28,6 +29,14 @@ class PostsController < ApplicationController
     end
   end
 
+  # DELETE
+  def destroy
+    @post.destroy
+    redirect_to root_path
+  end
+
+private
+
   # GET
   def edit
   end
@@ -39,12 +48,6 @@ class PostsController < ApplicationController
     else
       render 'edit'
   end
-  end
-
-  # DELETE
-  def destroy
-    @post.destroy
-    redirect_to root_path
   end
 
   def find_post

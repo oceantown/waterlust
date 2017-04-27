@@ -1,61 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    Current User: <%= current_user %>
-    <title>#WATERLUST</title>
-    <div class="nav">
-    <ul>
-      <li class="active"><%= link_to "#WATERLUST", root_path %></li>
-      <li><a href="#shots">Shots</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#support">Support</a></li>
-      <div id="signups">
-        <li><%= link_to "Sign Up", new_user_session_path %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to "Log Out", destroy_user_session_path, method: 'delete' %></li>
-          <% else %>
-            <li><%= link_to "Sign In", new_user_session_path %></li>
-          <% end %>
-        <input class="search" type="text" name="search" placeholder="Search">
-    </ul>
-    <div>
-    <ul class="subnav">
-        <li><a href="#popular">Popular</a></li>
-        <li><a href="#vote">Vote</a></li>
-        <li id="upload"><%= link_to "Upload", new_post_path %></li>
-        <div id="banner">
-            <%= link_to "#WATERLUST", root_path %>
-            <%= link_to image_tag("logo.png") %>
-        </div>
-    </ul>
-  <body>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+<head>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+    <%= render 'partials/navbar' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </head>
 
-<footer>
-    <ul>
-      <li class="active"><%= link_to "#WATERLUST", root_path %></li>
-      <li><a href="#shots">Shots</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#support">Support</a></li>
-      <div id="signups">
-        <li><%= link_to "Sign Up", new_user_session_path %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to "Log Out", destroy_user_session_path, method: 'delete' %></li>
-          <% else %>
-            <li><%= link_to "Sign In", new_user_session_path %></li>
-          <% end %>
-        <input class="search" type="text" name="search" placeholder="Search">
-    </ul>
-    <div>
-    © 2017
-</footer>
+    <div class="container">
+      <%= yield %>
+    </div>
 
+    <%= render 'partials/footer' %>
   </body>
 </html>

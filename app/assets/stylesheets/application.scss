@@ -10,12 +10,19 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+}
 
 @font-face {
   font-family: 'Market_Deco';
@@ -33,8 +40,8 @@
   position: relative;
   opacity: 0.5;
   border:0px solid #dbdbdb;
+  position: relative;
 }
-
 
 #signups {
   float: right;
@@ -42,9 +49,11 @@
 }
 
 body {
-  font-family: 'Market_Deco', sans-serif;
+  font-family: 'Market_Deco';
   text-decoration: none;
   font-size: 16px;
+  width: 100%;
+  height: 100%;
 }
 
 @font-face {
@@ -86,6 +95,12 @@ a:hover:not(.active) {
   color: grey;
 }
 
+a:hover:active {
+  background-color: #white;
+  text-decoration: none;
+  color: grey;
+}
+
 a:hover {
   color: black;
   background: white;
@@ -99,9 +114,7 @@ a:hover {
   background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
-
-#upload {
+  font-size: 16px;
 }
 
 .nav {
@@ -112,10 +125,10 @@ a:hover {
   background: #AFEEEE;
   font-family: 'Market_Deco';
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
   height: 50px;
+  opacity: .8;
 }
 
 .logo {
@@ -124,7 +137,8 @@ a:hover {
 }
 
 .form {
-  text-align: center;
+  position: absolute;
+  left: 40%;
 }
 
 .subnav ul {
@@ -143,18 +157,11 @@ a:hover {
   color: white;
 }
 
-#banner img {
-}
-
-#banner h1 {
-  text-align: center;
-  font-family: 'Market_Deco';
-  color: white;
-}
-
 footer {
+  margin-top: 30px;
   text-align: center;
-  background: grey;
+  background: lightgrey;
+  opacity: .5;
 }
 
 h1 {
@@ -163,4 +170,41 @@ h1 {
   -webkit-background-clip: text;
   text-align: center;
   font-size: 60px;
+}
+
+.thumbnail {
+  margin-top: 25px;
+  border: none;
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.thumbnail:hover {
+  opacity: 0.5;
+}
+
+h3 {
+  font-size: 16px;
+  margin: auto;
+}
+
+h2 {
+  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 60px;
+  text-align: center;
+}
+
+.name {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.caption {
+  display: inline-block;
+  font-size: 14px;
 }

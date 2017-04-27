@@ -1,0 +1,23 @@
+<header>
+  <title>#WATERLUST</title>
+  <div class="nav">
+  <ul>
+    <li class="active"><%= link_to "#WATERLUST", root_path %></li>
+    <li><a href="#shots">Shots</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#support">Support</a></li>
+    <div id="signups">
+      <li><%= link_to "Sign Up", new_user_session_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: 'delete' %></li>
+        <% else %>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+        <input class="search" type="text" name="search" placeholder="Search">
+  </ul>
+  <ul class="subnav">
+      <li><a href="#popular">Popular</a></li>
+      <li><a href="#vote">Vote</a></li>
+      <li id="upload"><%= link_to "Upload", new_post_path %></li>
+  </ul>
+</header>
