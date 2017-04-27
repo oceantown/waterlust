@@ -1,7 +1,6 @@
 ---
-![](images/waterlust.png)
+![](app/assets/images/waterlust.png)
 -
-
 
 # #WATERLUST was created for people to share their passion for imagery related to water. Inspired by an Instagram hash, #WATERLUST is home for water lovers to quench their thirst for travel inspiration.
 
@@ -17,13 +16,12 @@
 Plus the awesome GEMS: Simple Form, Devise and Paperclip.
 
 
-
 ## User stories:
-![] (images/user-stories.png)
+![](app/assets/images/user-stories.png)
 
 
 ## Wireframes:
-![](images/wireframes.png)
+![](app/assets/images/wireframes.png)
 
 
 ## Dream features:
