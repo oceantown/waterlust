@@ -217,7 +217,7 @@ h2 {
   font-size: 14px;
 }
 
-#glyphs {
+.glyphs {
   text-align: center;
   margin-bottom: 10px;
 }
@@ -231,12 +231,20 @@ h2 {
 }
 
 .glyphicon-eye-open:hover:before {
-    content: "\e105";
-    color: #ADECFB;
-    vertical-align: middle;
+  content: "\e105";
+  color: #ADECFB;
 }
 
 .glyphicon-heart:hover:before {
-    content: "\e005";
-    color: #FF7DB1;
+  content: "\e005";
+  color: #FF7DB1;
+}
+
+input[type="password"] {
+    font-family: caption;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }

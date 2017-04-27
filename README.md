@@ -1,24 +1,33 @@
-# README
+---
+![](images/waterlust.png)
+-
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# #WATERLUST was created for people to share their passion for imagery related to water. Inspired by an Instagram hash, #WATERLUST is home for water lovers to quench their thirst for travel inspiration.
 
-* Ruby version
+## Objective:
 
-* System dependencies
+<i>'#WATERLUST'</i> is a place for people to share water & travel related photography. Target users: (1) individuals in search of beautiful water related locations to visit (2) people bored at work, school or home, looking for eye candy to distract themselves (3) seasoned travelers and photographers looking to share information and photos in exchange for promotion. Personal insight + enticing photography is what makes #WATERLUST unique.  
 
-* Configuration
 
-* Database creation
+## Development:
 
-* Database initialization
+<i>'#WATERLUST'</i> is built with Ruby On Rails, HTML5, CCS3 & SASS.
 
-* How to run the test suite
+Plus the awesome GEMS: Simple Form, Devise and Paperclip.
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## User stories:
+![] (images/user-stories.png)
+
+
+## Wireframes:
+![](images/wireframes.png)
+
+
+## Dream features:
+- Mobile responsivity
+- Add private messaging system and profiles
+- Create more interactivity for users & content
+- Flight booking links
