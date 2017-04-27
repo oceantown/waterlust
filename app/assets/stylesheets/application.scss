@@ -54,6 +54,7 @@ body {
   font-size: 16px;
   width: 100%;
   height: 100%;
+  color: darkgrey;
 }
 
 @font-face {
@@ -98,7 +99,9 @@ a:hover:not(.active) {
 a:hover:active {
   background-color: #white;
   text-decoration: none;
-  color: grey;
+  background: -webkit-linear-gradient(50deg, #FFFACD, #FFB4CC 70%, #FFFACD);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 a:hover {
@@ -158,10 +161,12 @@ a:hover {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
   background: lightgrey;
   opacity: .5;
+  font-size: 16px;
+  color: darkgrey;
 }
 
 h1 {
@@ -173,12 +178,13 @@ h1 {
 }
 
 .thumbnail {
-  margin-top: 25px;
+  margin-top: 30px;
   border: none;
   opacity: 1;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
+  margin-bottom: auto;
 }
 
 .thumbnail:hover {
@@ -199,12 +205,19 @@ h2 {
 }
 
 .name {
-  display: inline-block;
+  display: inline;
   margin-left: 10px;
   font-size: 14px;
 }
 
 .caption {
   display: inline-block;
+  float: right;
+  margin-right: 14px;
   font-size: 14px;
+}
+
+#glyphs {
+  text-align: center;
+  margin-bottom: 10px;
 }

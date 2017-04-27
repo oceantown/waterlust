@@ -6,10 +6,12 @@
           <%= link_to(image_tag(post.image.url :small), post_path(post)) %>
           </div>
           <div class="name">
+            <%= link_to image_tag("icon.png") %>
             <%= link_to post.user.name %>
           </div>
           <div class="caption">
-            <%= link_to post.title, post_path(post) %>
+            <span class="glyphicon glyphicon-heart" aria-hidden="true">11</span>
+            <span class="glyphicon glyphicon-eye-open" aria-hidden="true">17</span>
         </div>
       </div>
     <% end %>

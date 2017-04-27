@@ -1,8 +1,12 @@
 <h1><%= @post.title %></h1>
-<p><%= image_tag @post.image.url(:medium) %><p>
-<p><%= @post.link %></p>
 <p><%= @post.description %></p>
-<p><%= @post.user.name %></p>
+<p><%= image_tag @post.image.url(:medium) %><p>
+  <div id="glyphs">
+  <span class="glyphicon glyphicon-heart" aria-hidden="true">11</span>
+  <span class="glyphicon glyphicon-eye-open" aria-hidden="true">17</span>
+  </div>
+<p><%= @post.link %></p>
+<p><%= link_to image_tag("icon.png") %><%= @post.user.name %></p>
 
 <% if @post.user == current_user %>
 <p><%= link_to "Edit", edit_post_path(@post) %></p>
