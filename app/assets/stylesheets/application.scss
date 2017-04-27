@@ -221,3 +221,22 @@ h2 {
   text-align: center;
   margin-bottom: 10px;
 }
+
+.glyphicon-eye-open:before {
+  vertical-align: middle;
+}
+
+.glyphicon-heart:before {
+  vertical-align: middle;
+}
+
+.glyphicon-eye-open:hover:before {
+    content: "\e105";
+    color: #ADECFB;
+    vertical-align: middle;
+}
+
+.glyphicon-heart:hover:before {
+    content: "\e005";
+    color: #FF7DB1;
+}
